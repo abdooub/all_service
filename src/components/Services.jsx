@@ -1,0 +1,182 @@
+import React from 'react'
+import { Zap, Paintbrush, Droplets, Grid3x3, Hammer, ArrowRight } from 'lucide-react'
+
+const Services = () => {
+  const services = [
+    {
+      icon: Zap,
+      title: 'Électricité',
+      titleAr: 'الكهرباء',
+      description: 'Installation et réparation électrique complète',
+      features: [
+        'Installation de câblage',
+        'Réparation de pannes',
+        'Installation d\'éclairage',
+        'Prises et interrupteurs',
+        'Tableaux électriques',
+        'Mise aux normes'
+      ],
+      color: 'from-yellow-400 to-orange-500',
+      iconBg: 'bg-yellow-100',
+      iconColor: 'text-yellow-600'
+    },
+    {
+      icon: Grid3x3,
+      title: 'Plâtrerie & Décoration',
+      titleAr: 'الجبس والديكور',
+      description: 'Travaux de plâtre et faux plafonds',
+      features: [
+        'Faux plafonds',
+        'Cloisons en plâtre',
+        'Décoration murale',
+        'Corniche et moulures',
+        'Isolation phonique',
+        'Design moderne'
+      ],
+      color: 'from-gray-400 to-gray-600',
+      iconBg: 'bg-gray-100',
+      iconColor: 'text-gray-600'
+    },
+    {
+      icon: Paintbrush,
+      title: 'Peinture',
+      titleAr: 'الدهان',
+      description: 'Peinture intérieure et extérieure',
+      features: [
+        'Peinture murale',
+        'Peinture de façade',
+        'Enduit et lissage',
+        'Peinture décorative',
+        'Tadelakt marocain',
+        'Finitions de qualité'
+      ],
+      color: 'from-pink-400 to-red-500',
+      iconBg: 'bg-pink-100',
+      iconColor: 'text-pink-600'
+    },
+    {
+      icon: Grid3x3,
+      title: 'Carrelage',
+      titleAr: 'الزليج',
+      description: 'Pose de carrelage et zellij traditionnel',
+      features: [
+        'Carrelage sol et mur',
+        'Zellij marocain',
+        'Faïence salle de bain',
+        'Carrelage terrasse',
+        'Joints et finitions',
+        'Réparation carrelage'
+      ],
+      color: 'from-blue-400 to-cyan-500',
+      iconBg: 'bg-blue-100',
+      iconColor: 'text-blue-600'
+    },
+    {
+      icon: Droplets,
+      title: 'Plomberie',
+      titleAr: 'السباكة',
+      description: 'Installation et réparation sanitaire',
+      features: [
+        'Réparation fuites',
+        'Installation sanitaire',
+        'Débouchage canalisations',
+        'Chauffe-eau',
+        'Robinetterie',
+        'Urgences 24/7'
+      ],
+      color: 'from-blue-500 to-blue-700',
+      iconBg: 'bg-blue-100',
+      iconColor: 'text-blue-700'
+    },
+    {
+      icon: Hammer,
+      title: 'Réparations Diverses',
+      titleAr: 'إصلاحات متنوعة',
+      description: 'Petits travaux et réparations',
+      features: [
+        'Menuiserie',
+        'Serrurerie',
+        'Réparation portes/fenêtres',
+        'Montage meubles',
+        'Petits travaux',
+        'Maintenance générale'
+      ],
+      color: 'from-green-400 to-emerald-600',
+      iconBg: 'bg-green-100',
+      iconColor: 'text-green-600'
+    }
+  ]
+
+  return (
+    <section id="services" className="py-20 bg-gradient-to-b from-gray-50 to-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-16">
+          <h2 className="section-title">
+            Nos <span className="text-primary">Services</span>
+          </h2>
+          <p className="section-subtitle">
+            Une gamme complète de services pour tous vos besoins en réparation et rénovation
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {services.map((service, index) => (
+            <div 
+              key={index}
+              className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden group"
+            >
+              {/* Header with gradient */}
+              <div className={`bg-gradient-to-r ${service.color} p-6 text-white`}>
+                <div className="flex items-center justify-between mb-3">
+                  <div className={`${service.iconBg} p-3 rounded-lg`}>
+                    <service.icon className={`h-8 w-8 ${service.iconColor}`} />
+                  </div>
+                  <span className="text-sm opacity-90">{service.titleAr}</span>
+                </div>
+                <h3 className="text-2xl font-bold mb-2">{service.title}</h3>
+                <p className="text-white/90 text-sm">{service.description}</p>
+              </div>
+
+              {/* Features List */}
+              <div className="p-6">
+                <ul className="space-y-3">
+                  {service.features.map((feature, idx) => (
+                    <li key={idx} className="flex items-start space-x-2">
+                      <ArrowRight className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                      <span className="text-gray-700 text-sm">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+                
+                <a 
+                  href="#contact"
+                  className="mt-6 w-full btn-primary text-center block group-hover:scale-105 transition-transform"
+                >
+                  Demander un devis
+                </a>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Call to Action */}
+        <div className="mt-16 text-center bg-primary rounded-2xl p-8 md:p-12 text-white">
+          <h3 className="text-3xl font-bold mb-4">Besoin d'un service personnalisé ?</h3>
+          <p className="text-xl mb-6 opacity-90">
+            Contactez-nous pour discuter de votre projet. Nous sommes là pour vous aider !
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="#contact" className="bg-white text-primary hover:bg-gray-100 font-semibold py-3 px-8 rounded-lg transition-all duration-300 inline-block">
+              Obtenir un devis gratuit
+            </a>
+            <a href="tel:+212600000000" className="bg-primary-dark hover:bg-primary text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 inline-block border-2 border-white">
+              Appeler maintenant
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}
+
+export default Services
