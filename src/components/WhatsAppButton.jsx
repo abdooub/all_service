@@ -15,7 +15,7 @@ const WhatsAppButton = () => {
     return () => clearTimeout(timer)
   }, [])
 
-  const whatsappNumber = '+212600000000'
+  const whatsappNumber = '+212722284955'
   const message = encodeURIComponent('Bonjour Fix Dar, je souhaite obtenir plus d\'informations sur vos services.')
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${message}`
 

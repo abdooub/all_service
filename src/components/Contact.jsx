@@ -49,8 +49,8 @@ const Contact = () => {
     {
       icon: Phone,
       title: 'Téléphone',
-      info: '+212 600 000 000',
-      link: 'tel:+212600000000',
+      info: '+212 722-284955',
+      link: 'tel:+212722284955',
       color: 'text-green-600',
       bg: 'bg-green-100'
     },
@@ -139,7 +139,7 @@ const Contact = () => {
                       value={formData.phone}
                       onChange={handleChange}
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
-                      placeholder="+212 600 000 000"
+                      placeholder="+212 722-284955"
                     />
                   </div>
 
@@ -256,7 +256,7 @@ const Contact = () => {
                 Pour les urgences (fuites, pannes électriques, etc.), appelez-nous immédiatement !
               </p>
               <a
-                href="tel:+212600000000"
+                href="tel:+212722284955"
                 className="bg-red-600 hover:bg-red-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 inline-flex items-center space-x-2"
               >
                 <Phone className="h-5 w-5" />

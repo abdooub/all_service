@@ -46,10 +46,10 @@ const Footer = () => {
               Votre partenaire de confiance pour tous vos travaux de réparation et rénovation à Marrakech.
             </p>
             <div className="flex space-x-3">
-              <a href="#" className="bg-gray-800 hover:bg-primary p-2 rounded-lg transition-colors">
+              <a href="https://www.facebook.com/share/1KN6u7jEAQ/" target="_blank" rel="noopener noreferrer" className="bg-gray-800 hover:bg-primary p-2 rounded-lg transition-colors">
                 <Facebook className="h-5 w-5" />
               </a>
-              <a href="#" className="bg-gray-800 hover:bg-primary p-2 rounded-lg transition-colors">
+              <a href="https://www.instagram.com/brexhome1/" target="_blank" rel="noopener noreferrer" className="bg-gray-800 hover:bg-primary p-2 rounded-lg transition-colors">
                 <Instagram className="h-5 w-5" />
               </a>
               <a href="#" className="bg-gray-800 hover:bg-primary p-2 rounded-lg transition-colors">
@@ -93,8 +93,8 @@ const Footer = () => {
               <li className="flex items-start space-x-3">
                 <Phone className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
                 <div>
-                  <a href="tel:+212600000000" className="text-gray-400 hover:text-primary transition-colors">
-                    +212 600 000 000
+                  <a href="tel:+212722284955" className="text-gray-400 hover:text-primary transition-colors">
+                    +212 722-284955
                   </a>
                   <p className="text-xs text-gray-500">Disponible 24/7</p>
                 </div>
