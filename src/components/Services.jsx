@@ -1,5 +1,5 @@
 import React from 'react'
-import { Zap, Paintbrush, Droplets, Grid3x3, Hammer, ArrowRight } from 'lucide-react'
+import { Zap, Paintbrush, Droplets, Grid3x3, Hammer, ArrowRight, Camera } from 'lucide-react'
 
 const Services = () => {
   const services = [
@@ -104,6 +104,23 @@ const Services = () => {
       color: 'from-green-400 to-emerald-600',
       iconBg: 'bg-green-100',
       iconColor: 'text-green-600'
+    },
+    {
+      icon: Camera,
+      title: 'Caméras de Surveillance',
+      titleAr: 'كاميرات المراقبة',
+      description: 'Installation de systèmes de surveillance',
+      features: [
+        'Caméras HD/4K',
+        'Systèmes connectés',
+        'Vision nocturne',
+        'Accès à distance',
+        'Enregistrement cloud',
+        'Installation professionnelle'
+      ],
+      color: 'from-purple-400 to-purple-600',
+      iconBg: 'bg-purple-100',
+      iconColor: 'text-purple-600'
     }
   ]
 
@@ -149,7 +166,9 @@ const Services = () => {
                 </ul>
                 
                 <a 
-                  href="#contact"
+                  href="https://wa.me/212722284955?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%20BrexHome%D8%8C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%B9%D8%B1%D8%B6%20%D8%B3%D8%B9%D8%B1%20%D9%84%D8%AE%D8%AF%D9%85%D8%A9%20"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="mt-6 w-full btn-primary text-center block group-hover:scale-105 transition-transform"
                 >
                   Demander un devis
@@ -166,10 +185,10 @@ const Services = () => {
             Contactez-nous pour discuter de votre projet. Nous sommes là pour vous aider !
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="#contact" className="bg-white text-primary hover:bg-gray-100 font-semibold py-3 px-8 rounded-lg transition-all duration-300 inline-block">
+            <a href="https://wa.me/212722284955?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%20BrexHome%D8%8C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%A7%D9%84%D8%AD%D8%B5%D9%88%D9%84%20%D8%B9%D9%84%D9%89%20%D8%B9%D8%B1%D8%B6%20%D8%B3%D8%B9%D8%B1%20%D9%85%D8%AC%D8%A7%D9%86%D9%8A" target="_blank" rel="noopener noreferrer" className="bg-white text-primary hover:bg-gray-100 font-semibold py-3 px-8 rounded-lg transition-all duration-300 inline-block">
               Obtenir un devis gratuit
             </a>
-            <a href="tel:+212600000000" className="bg-primary-dark hover:bg-primary text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 inline-block border-2 border-white">
+            <a href="tel:+212722284955" className="bg-primary-dark hover:bg-primary text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 inline-block border-2 border-white">
               Appeler maintenant
             </a>
           </div>

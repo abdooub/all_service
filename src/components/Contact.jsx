@@ -20,19 +20,17 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    // Here you would typically send the form data to your backend
-    console.log('Form submitted:', formData)
-    setIsSubmitted(true)
-    setTimeout(() => {
-      setIsSubmitted(false)
-      setFormData({
-        name: '',
-        phone: '',
-        email: '',
-        service: '',
-        message: ''
-      })
-    }, 3000)
+    // Créer le message WhatsApp avec les données du formulaire
+    const whatsappMessage = `مرحبا BrexHome،
+    
+الاسم: ${formData.name}
+الهاتف: ${formData.phone}
+${formData.email ? `البريد الإلكتروني: ${formData.email}` : ''}
+الخدمة المطلوبة: ${formData.service}
+الرسالة: ${formData.message}`
+    
+    const whatsappUrl = `https://wa.me/212722284955?text=${encodeURIComponent(whatsappMessage)}`
+    window.open(whatsappUrl, '_blank')
   }
 
   const services = [
@@ -57,8 +55,8 @@ const Contact = () => {
     {
       icon: Mail,
       title: 'Email',
-      info: 'contact@fixdar.ma',
-      link: 'mailto:contact@fixdar.ma',
+      info: 'contactbrexhome@gmail.com',
+      link: 'mailto:contactbrexhome@gmail.com',
       color: 'text-blue-600',
       bg: 'bg-blue-100'
     },

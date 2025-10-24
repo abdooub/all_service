@@ -10,27 +10,27 @@ const Hero = () => {
           <div className="text-center md:text-left">
             <div className="inline-block mb-4">
               <span className="bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-semibold">
-                🏠 Services Professionnels à Marrakech
+                🏠 خدمات منزلية متكاملة في مراكش
               </span>
             </div>
             
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-              Votre maison,{' '}
-              <span className="text-primary">notre mission !</span>
+              بيتك في{' '}
+              <span className="text-primary">أيادي أمينة</span>
             </h1>
             
             <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-              Des experts qualifiés pour tous vos travaux de réparation et rénovation. 
-              Électricité, plâtrerie, peinture, carrelage et plomberie.
+              خدمات منزلية متكاملة: صباغة وديكور عصري، كهرباء وإضاءة، سباكة وتجهيزات صحية، 
+              تركيب كاميرات مراقبة، صيانة وإصلاحات متنوعة.
             </p>
 
             {/* Features */}
             <div className="space-y-3 mb-8">
               {[
-                'Intervention rapide 24/7',
-                'Devis gratuit et transparent',
-                'Artisans certifiés et expérimentés',
-                'Garantie satisfaction client'
+                'جودة عالية في العمل',
+                'سرعة في الإنجاز',
+                'أثمنة مناسبة وتنافسية',
+                'راحة البال والاطمئنان'
               ].map((feature, index) => (
                 <div key={index} className="flex items-center space-x-3">
                   <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0" />
@@ -41,11 +41,11 @@ const Hero = () => {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-              <a href="#contact" className="btn-primary inline-flex items-center justify-center space-x-2">
+              <a href="https://wa.me/212722284955?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%20BrexHome%D8%8C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%A7%D9%84%D8%AD%D8%B5%D9%88%D9%84%20%D8%B9%D9%84%D9%89%20%D8%B9%D8%B1%D8%B6%20%D8%B3%D8%B9%D8%B1" target="_blank" rel="noopener noreferrer" className="btn-primary inline-flex items-center justify-center space-x-2">
                 <span>Demander un devis</span>
                 <ArrowRight className="h-5 w-5" />
               </a>
-              <a href="tel:+212600000000" className="btn-secondary inline-flex items-center justify-center space-x-2">
+              <a href="tel:+212722284955" className="btn-secondary inline-flex items-center justify-center space-x-2">
                 <Phone className="h-5 w-5" />
                 <span>Appelez maintenant</span>
               </a>
@@ -58,9 +58,9 @@ const Hero = () => {
               <div className="aspect-square bg-gradient-to-br from-primary to-blue-600 flex items-center justify-center">
                 <div className="text-center text-white p-8">
                   <div className="text-6xl mb-4">🏡</div>
-                  <h3 className="text-3xl font-bold mb-2">Fix Dar</h3>
-                  <p className="text-xl opacity-90">فيكس دار</p>
-                  <p className="mt-4 text-lg">Votre partenaire de confiance</p>
+                  <h3 className="text-3xl font-bold mb-2">BrexHome</h3>
+                  <p className="text-xl opacity-90">بريكس هوم</p>
+                  <p className="mt-4 text-lg">بيتك في أيادي أمينة</p>
                 </div>
               </div>
             </div>

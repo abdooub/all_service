@@ -16,7 +16,7 @@ const WhatsAppButton = () => {
   }, [])
 
   const whatsappNumber = '+212722284955'
-  const message = encodeURIComponent('Bonjour Fix Dar, je souhaite obtenir plus d\'informations sur vos services.')
+  const message = encodeURIComponent('مرحبا BrexHome، أريد الحصول على معلومات حول خدماتكم المنزلية.')
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${message}`
 
   if (!isVisible) return null

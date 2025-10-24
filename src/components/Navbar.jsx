@@ -29,15 +29,17 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
-          <div className="flex items-center space-x-2">
-            <div className="bg-primary p-2 rounded-lg">
-              <Wrench className="h-6 w-6 text-white" />
-            </div>
+          <a href="#home" className="flex items-center space-x-3">
+            <img 
+              src="/image/logo.jpeg" 
+              alt="BrexHome Logo" 
+              className="h-14 w-auto object-contain"
+            />
             <div>
-              <h1 className="text-2xl font-bold text-primary">Fix Dar</h1>
-              <p className="text-xs text-gray-600">فيكس دار</p>
+              <h1 className="text-2xl font-bold text-primary">BrexHome</h1>
+              <p className="text-xs text-gray-600">بريكس هوم</p>
             </div>
-          </div>
+          </a>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
@@ -51,7 +53,7 @@ const Navbar = () => {
               </a>
             ))}
             <a
-              href="tel:+212600000000"
+              href="tel:+212722284955"
               className="flex items-center space-x-2 btn-primary"
             >
               <Phone className="h-4 w-4" />
@@ -86,7 +88,7 @@ const Navbar = () => {
               </a>
             ))}
             <a
-              href="tel:+212600000000"
+              href="tel:+212722284955"
               className="flex items-center justify-center space-x-2 btn-primary w-full mt-4"
             >
               <Phone className="h-4 w-4" />

@@ -38,12 +38,12 @@ const Footer = () => {
                 <Wrench className="h-6 w-6 text-white" />
               </div>
               <div>
-                <h3 className="text-xl font-bold">Fix Dar</h3>
-                <p className="text-sm text-gray-400">فيكس دار</p>
+                <h3 className="text-xl font-bold">BrexHome</h3>
+                <p className="text-sm text-gray-400">بريكس هوم</p>
               </div>
             </div>
             <p className="text-gray-400 mb-4 leading-relaxed">
-              Votre partenaire de confiance pour tous vos travaux de réparation et rénovation à Marrakech.
+              خدمات منزلية متكاملة في مكان واحد. جودة عالية - سرعة في الإنجاز - أثمنة مناسبة.
             </p>
             <div className="flex space-x-3">
               <a href="https://www.facebook.com/share/1KN6u7jEAQ/" target="_blank" rel="noopener noreferrer" className="bg-gray-800 hover:bg-primary p-2 rounded-lg transition-colors">
@@ -101,8 +101,8 @@ const Footer = () => {
               </li>
               <li className="flex items-start space-x-3">
                 <Mail className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                <a href="mailto:contact@fixdar.ma" className="text-gray-400 hover:text-primary transition-colors">
-                  contact@fixdar.ma
+                <a href="mailto:contactbrexhome@gmail.com" className="text-gray-400 hover:text-primary transition-colors">
+                  contactbrexhome@gmail.com
                 </a>
               </li>
               <li className="flex items-start space-x-3">
@@ -121,10 +121,10 @@ const Footer = () => {
         {/* Bottom Footer */}
         <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
           <p className="text-gray-400 text-sm text-center md:text-left">
-            © {currentYear} Fix Dar. Tous droits réservés. | 
-            <span className="text-primary"> Électricien Marrakech</span> | 
-            <span className="text-primary"> Plâtrier Marrakech</span> | 
-            <span className="text-primary"> Peintre Marrakech</span>
+            © {currentYear} BrexHome - بريكس هوم. Tous droits réservés. | 
+            <span className="text-primary"> كهرباء مراكش</span> | 
+            <span className="text-primary"> صباغة مراكش</span> | 
+            <span className="text-primary"> سباكة مراكش</span>
           </p>
           
           <button
@@ -139,9 +139,7 @@ const Footer = () => {
         {/* SEO Keywords */}
         <div className="mt-6 text-xs text-gray-600 text-center">
           <p>
-            Mots-clés : électricien Marrakech, plâtrier Marrakech, peintre Marrakech, 
-            carreleur Marrakech, réparation maison Marrakech, plombier Marrakech, 
-            rénovation Marrakech, zellij Marrakech, travaux maison Marrakech
+            BrexHome - بريكس هوم | خدمات منزلية متكاملة مراكش: صباغة، كهرباء، سباكة، كاميرات مراقبة، صيانة وإصلاحات
           </p>
         </div>
       </div>

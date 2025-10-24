@@ -34,10 +34,10 @@ const About = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="section-title">
-            À Propos de <span className="text-primary">Fix Dar</span>
+            À Propos de <span className="text-primary">BrexHome</span>
           </h2>
           <p className="section-subtitle">
-            Votre partenaire de confiance pour tous vos travaux de réparation et rénovation à Marrakech
+            خدمات منزلية متكاملة في مكان واحد - بيتك في أيادي أمينة
           </p>
         </div>
 
@@ -47,17 +47,15 @@ const About = () => {
               Qui sommes-nous ?
             </h3>
             <p className="text-gray-600 mb-4 leading-relaxed">
-              <strong className="text-primary">Fix Dar</strong> (فيكس دار) est une entreprise marocaine spécialisée 
-              dans les services de réparation et rénovation résidentielle à Marrakech. Nous mettons à votre 
-              disposition une équipe d'artisans qualifiés et expérimentés pour transformer votre maison.
+              <strong className="text-primary">BrexHome</strong> (بريكس هوم) هي شركة مغربية متخصصة في تقديم خدمات منزلية متكاملة في مراكش. 
+              نضع تحت تصرفكم فريقًا من الحرفيين المؤهلين وذوي الخبرة لتحويل منزلكم.
             </p>
             <p className="text-gray-600 mb-4 leading-relaxed">
-              Notre mission est simple : offrir des services de qualité supérieure à des prix compétitifs, 
-              tout en respectant les délais convenus. Nous croyons que chaque maison mérite les meilleurs soins.
+              مهمتنا بسيطة: تقديم خدمات عالية الجودة بأثمنة تنافسية، مع احترام المواعيد المتفق عليها. 
+              نؤمن أن كل منزل يستحق أفضل عناية.
             </p>
             <p className="text-gray-600 leading-relaxed">
-              Que ce soit pour une petite réparation ou un grand projet de rénovation, notre équipe est 
-              prête à vous accompagner avec professionnalisme et dévouement.
+              سواء كان لإصلاح بسيط أو مشروع تجديد كبير، فريقنا جاهز لمرافقتكم باحترافية وتفاني.
             </p>
           </div>
 
