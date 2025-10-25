@@ -31,7 +31,7 @@ const Navbar = () => {
     <nav className={`fixed w-full z-50 transition-all duration-300 ${
       isScrolled ? 'bg-gradient-to-r from-primary/5 to-white shadow-lg' : 'bg-gradient-to-r from-primary/10 to-white/95 backdrop-blur-sm'
     }`}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="container-responsive">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <a href="#home" className="flex items-center space-x-3">

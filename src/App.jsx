@@ -18,7 +18,7 @@ function App() {
         <meta name="description" content="Fix Dar offre des services professionnels de réparation et rénovation à Marrakech : électricité, plâtrerie, peinture, carrelage, plomberie. Votre maison, notre mission !" />
       </Helmet>
       
-      <div className="min-h-screen bg-white">
+      <div className="min-h-screen bg-white flex flex-col">
         <Navbar />
         <Hero />
         <About />

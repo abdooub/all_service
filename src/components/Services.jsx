@@ -6,127 +6,21 @@ import { translations } from '../translations/translations'
 const Services = () => {
   const { language } = useLanguage()
   const t = translations[language]
-  const services = [
-    {
-      icon: Zap,
-      title: 'Électricité',
-      titleAr: 'الكهرباء',
-      description: 'Installation et réparation électrique complète',
-      features: [
-        'Installation de câblage',
-        'Réparation de pannes',
-        'Installation d\'éclairage',
-        'Prises et interrupteurs',
-        'Tableaux électriques',
-        'Mise aux normes'
-      ],
-      color: 'from-yellow-400 to-orange-500',
-      iconBg: 'bg-yellow-100',
-      iconColor: 'text-yellow-600'
-    },
-    {
-      icon: Grid3x3,
-      title: 'Plâtrerie & Décoration',
-      titleAr: 'الجبس والديكور',
-      description: 'Travaux de plâtre et faux plafonds',
-      features: [
-        'Faux plafonds',
-        'Cloisons en plâtre',
-        'Décoration murale',
-        'Corniche et moulures',
-        'Isolation phonique',
-        'Design moderne'
-      ],
-      color: 'from-gray-400 to-gray-600',
-      iconBg: 'bg-gray-100',
-      iconColor: 'text-gray-600'
-    },
-    {
-      icon: Paintbrush,
-      title: 'Peinture',
-      titleAr: 'الدهان',
-      description: 'Peinture intérieure et extérieure',
-      features: [
-        'Peinture murale',
-        'Peinture de façade',
-        'Enduit et lissage',
-        'Peinture décorative',
-        'Tadelakt marocain',
-        'Finitions de qualité'
-      ],
-      color: 'from-pink-400 to-red-500',
-      iconBg: 'bg-pink-100',
-      iconColor: 'text-pink-600'
-    },
-    {
-      icon: Grid3x3,
-      title: 'Carrelage',
-      titleAr: 'الزليج',
-      description: 'Pose de carrelage et zellij traditionnel',
-      features: [
-        'Carrelage sol et mur',
-        'Zellij marocain',
-        'Faïence salle de bain',
-        'Carrelage terrasse',
-        'Joints et finitions',
-        'Réparation carrelage'
-      ],
-      color: 'from-blue-400 to-cyan-500',
-      iconBg: 'bg-blue-100',
-      iconColor: 'text-blue-600'
-    },
-    {
-      icon: Droplets,
-      title: 'Plomberie',
-      titleAr: 'السباكة',
-      description: 'Installation et réparation sanitaire',
-      features: [
-        'Réparation fuites',
-        'Installation sanitaire',
-        'Débouchage canalisations',
-        'Chauffe-eau',
-        'Robinetterie',
-        'Urgences 24/7'
-      ],
-      color: 'from-blue-500 to-blue-700',
-      iconBg: 'bg-blue-100',
-      iconColor: 'text-blue-700'
-    },
-    {
-      icon: Hammer,
-      title: 'Réparations Diverses',
-      titleAr: 'إصلاحات متنوعة',
-      description: 'Petits travaux et réparations',
-      features: [
-        'Menuiserie',
-        'Serrurerie',
-        'Réparation portes/fenêtres',
-        'Montage meubles',
-        'Petits travaux',
-        'Maintenance générale'
-      ],
-      color: 'from-green-400 to-emerald-600',
-      iconBg: 'bg-green-100',
-      iconColor: 'text-green-600'
-    },
-    {
-      icon: Camera,
-      title: 'Caméras de Surveillance',
-      titleAr: 'كاميرات المراقبة',
-      description: 'Installation de systèmes de surveillance',
-      features: [
-        'Caméras HD/4K',
-        'Systèmes connectés',
-        'Vision nocturne',
-        'Accès à distance',
-        'Enregistrement cloud',
-        'Installation professionnelle'
-      ],
-      color: 'from-purple-400 to-purple-600',
-      iconBg: 'bg-purple-100',
-      iconColor: 'text-purple-600'
-    }
+  
+  const serviceConfigs = [
+    { key: 'electricity', icon: Zap, color: 'from-yellow-400 to-orange-500', iconBg: 'bg-yellow-100', iconColor: 'text-yellow-600' },
+    { key: 'plastering', icon: Grid3x3, color: 'from-gray-400 to-gray-600', iconBg: 'bg-gray-100', iconColor: 'text-gray-600' },
+    { key: 'painting', icon: Paintbrush, color: 'from-pink-400 to-red-500', iconBg: 'bg-pink-100', iconColor: 'text-pink-600' },
+    { key: 'tiling', icon: Grid3x3, color: 'from-blue-400 to-cyan-500', iconBg: 'bg-blue-100', iconColor: 'text-blue-600' },
+    { key: 'plumbing', icon: Droplets, color: 'from-blue-500 to-blue-700', iconBg: 'bg-blue-100', iconColor: 'text-blue-700' },
+    { key: 'repairs', icon: Hammer, color: 'from-green-400 to-emerald-600', iconBg: 'bg-green-100', iconColor: 'text-green-600' },
+    { key: 'cameras', icon: Camera, color: 'from-purple-400 to-purple-600', iconBg: 'bg-purple-100', iconColor: 'text-purple-600' }
   ]
+
+  const services = serviceConfigs.map(config => ({
+    ...config,
+    ...t.services[config.key]
+  }))
 
   return (
     <section id="services" className="py-20 bg-gradient-to-b from-gray-50 to-white">
