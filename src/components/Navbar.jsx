@@ -1,9 +1,14 @@
 import React, { useState, useEffect } from 'react'
 import { Menu, X, Phone, Wrench } from 'lucide-react'
+import { useLanguage } from '../contexts/LanguageContext'
+import { translations } from '../translations/translations'
+import LanguageSwitcher from './LanguageSwitcher'
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
+  const { language } = useLanguage()
+  const t = translations[language]
 
   useEffect(() => {
     const handleScroll = () => {
@@ -14,17 +19,17 @@ const Navbar = () => {
   }, [])
 
   const navLinks = [
-    { name: 'Accueil', href: '#home' },
-    { name: 'À Propos', href: '#about' },
-    { name: 'Services', href: '#services' },
-    { name: 'Galerie', href: '#gallery' },
-    { name: 'Témoignages', href: '#testimonials' },
-    { name: 'Contact', href: '#contact' },
+    { name: t.nav.home, href: '#home' },
+    { name: t.nav.about, href: '#about' },
+    { name: t.nav.services, href: '#services' },
+    { name: t.nav.gallery, href: '#gallery' },
+    { name: t.nav.testimonials, href: '#testimonials' },
+    { name: t.nav.contact, href: '#contact' },
   ]
 
   return (
     <nav className={`fixed w-full z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-white shadow-lg' : 'bg-white/95 backdrop-blur-sm'
+      isScrolled ? 'bg-gradient-to-r from-primary/5 to-white shadow-lg' : 'bg-gradient-to-r from-primary/10 to-white/95 backdrop-blur-sm'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
@@ -42,7 +47,7 @@ const Navbar = () => {
           </a>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-4">
             {navLinks.map((link) => (
               <a
                 key={link.name}
@@ -52,12 +57,13 @@ const Navbar = () => {
                 {link.name}
               </a>
             ))}
+            <LanguageSwitcher />
             <a
               href="tel:+212722284955"
               className="flex items-center space-x-2 btn-primary"
             >
               <Phone className="h-4 w-4" />
-              <span>Appelez-nous</span>
+              <span>{t.nav.callUs}</span>
             </a>
           </div>
 
@@ -87,12 +93,15 @@ const Navbar = () => {
                 {link.name}
               </a>
             ))}
+            <div className="px-4 py-2">
+              <LanguageSwitcher />
+            </div>
             <a
               href="tel:+212722284955"
               className="flex items-center justify-center space-x-2 btn-primary w-full mt-4"
             >
               <Phone className="h-4 w-4" />
-              <span>Appelez-nous</span>
+              <span>{t.nav.callUs}</span>
             </a>
           </div>
         </div>

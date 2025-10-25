@@ -1,7 +1,11 @@
 import React from 'react'
 import { Zap, Paintbrush, Droplets, Grid3x3, Hammer, ArrowRight, Camera } from 'lucide-react'
+import { useLanguage } from '../contexts/LanguageContext'
+import { translations } from '../translations/translations'
 
 const Services = () => {
+  const { language } = useLanguage()
+  const t = translations[language]
   const services = [
     {
       icon: Zap,
@@ -129,10 +133,10 @@ const Services = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="section-title">
-            Nos <span className="text-primary">Services</span>
+            {t.services.title} <span className="text-primary">{t.services.titleHighlight}</span>
           </h2>
           <p className="section-subtitle">
-            Une gamme complète de services pour tous vos besoins en réparation et rénovation
+            {t.services.subtitle}
           </p>
         </div>
 
@@ -171,7 +175,7 @@ const Services = () => {
                   rel="noopener noreferrer"
                   className="mt-6 w-full btn-primary text-center block group-hover:scale-105 transition-transform"
                 >
-                  Demander un devis
+                  {t.services.getQuote}
                 </a>
               </div>
             </div>
@@ -180,16 +184,16 @@ const Services = () => {
 
         {/* Call to Action */}
         <div className="mt-16 text-center bg-primary rounded-2xl p-8 md:p-12 text-white">
-          <h3 className="text-3xl font-bold mb-4">Besoin d'un service personnalisé ?</h3>
+          <h3 className="text-3xl font-bold mb-4">{t.services.ctaTitle}</h3>
           <p className="text-xl mb-6 opacity-90">
-            Contactez-nous pour discuter de votre projet. Nous sommes là pour vous aider !
+            {t.services.ctaDescription}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="https://wa.me/212722284955?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%20BrexHome%D8%8C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%A7%D9%84%D8%AD%D8%B5%D9%88%D9%84%20%D8%B9%D9%84%D9%89%20%D8%B9%D8%B1%D8%B6%20%D8%B3%D8%B9%D8%B1%20%D9%85%D8%AC%D8%A7%D9%86%D9%8A" target="_blank" rel="noopener noreferrer" className="bg-white text-primary hover:bg-gray-100 font-semibold py-3 px-8 rounded-lg transition-all duration-300 inline-block">
-              Obtenir un devis gratuit
+              {t.services.ctaButton}
             </a>
             <a href="tel:+212722284955" className="bg-primary-dark hover:bg-primary text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 inline-block border-2 border-white">
-              Appeler maintenant
+              {t.services.callNow}
             </a>
           </div>
         </div>

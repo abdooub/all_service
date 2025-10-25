@@ -1,7 +1,11 @@
 import React, { useState } from 'react'
 import { Mail, Phone, MapPin, Clock, Send, CheckCircle } from 'lucide-react'
+import { useLanguage } from '../contexts/LanguageContext'
+import { translations } from '../translations/translations'
 
 const Contact = () => {
+  const { language } = useLanguage()
+  const t = translations[language]
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
@@ -84,10 +88,10 @@ ${formData.email ? `البريد الإلكتروني: ${formData.email}` : ''}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="section-title">
-            Contactez-<span className="text-primary">nous</span>
+            {t.contact.title} <span className="text-primary">{t.contact.titleHighlight}</span>
           </h2>
           <p className="section-subtitle">
-            Nous sommes à votre écoute pour tous vos projets de réparation et rénovation
+            {t.contact.subtitle}
           </p>
         </div>
 

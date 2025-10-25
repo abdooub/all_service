@@ -1,7 +1,11 @@
 import React from 'react'
 import { Award, Users, Clock, Shield } from 'lucide-react'
+import { useLanguage } from '../contexts/LanguageContext'
+import { translations } from '../translations/translations'
 
 const About = () => {
+  const { language } = useLanguage()
+  const t = translations[language]
   const features = [
     {
       icon: Award,
@@ -34,34 +38,32 @@ const About = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="section-title">
-            À Propos de <span className="text-primary">BrexHome</span>
+            {t.about.title} <span className="text-primary">BrexHome</span>
           </h2>
           <p className="section-subtitle">
-            خدمات منزلية متكاملة في مكان واحد - بيتك في أيادي أمينة
+            {t.about.subtitle}
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
           <div>
             <h3 className="text-2xl font-bold text-gray-800 mb-4">
-              Qui sommes-nous ?
+              {t.about.whoWeAre}
             </h3>
             <p className="text-gray-600 mb-4 leading-relaxed">
-              <strong className="text-primary">BrexHome</strong> (بريكس هوم) هي شركة مغربية متخصصة في تقديم خدمات منزلية متكاملة في مراكش. 
-              نضع تحت تصرفكم فريقًا من الحرفيين المؤهلين وذوي الخبرة لتحويل منزلكم.
+              <strong className="text-primary">BrexHome</strong> {t.about.description1}
             </p>
             <p className="text-gray-600 mb-4 leading-relaxed">
-              مهمتنا بسيطة: تقديم خدمات عالية الجودة بأثمنة تنافسية، مع احترام المواعيد المتفق عليها. 
-              نؤمن أن كل منزل يستحق أفضل عناية.
+              {t.about.description2}
             </p>
             <p className="text-gray-600 leading-relaxed">
-              سواء كان لإصلاح بسيط أو مشروع تجديد كبير، فريقنا جاهز لمرافقتكم باحترافية وتفاني.
+              {t.about.description3}
             </p>
           </div>
 
           <div className="relative">
             <div className="bg-gradient-to-br from-primary to-blue-600 rounded-2xl p-8 text-white">
-              <h4 className="text-2xl font-bold mb-6">Nos Valeurs</h4>
+              <h4 className="text-2xl font-bold mb-6">{t.about.values}</h4>
               <ul className="space-y-4">
                 <li className="flex items-start space-x-3">
                   <span className="text-2xl">✓</span>

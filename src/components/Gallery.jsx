@@ -1,9 +1,13 @@
 import React, { useState } from 'react'
 import { X } from 'lucide-react'
+import { useLanguage } from '../contexts/LanguageContext'
+import { translations } from '../translations/translations'
 
 const Gallery = () => {
+  const { language } = useLanguage()
+  const t = translations[language]
   const [selectedImage, setSelectedImage] = useState(null)
-  const [activeFilter, setActiveFilter] = useState('Tous')
+  const [activeFilter, setActiveFilter] = useState(t.gallery.all)
 
   const projects = [
     {
@@ -71,9 +75,9 @@ const Gallery = () => {
     }
   ]
 
-  const categories = ['Tous', 'Électricité', 'Plâtrerie', 'Peinture', 'Carrelage', 'Plomberie']
+  const categories = [t.gallery.all, 'Électricité', 'Plâtrerie', 'Peinture', 'Carrelage', 'Plomberie']
 
-  const filteredProjects = activeFilter === 'Tous' 
+  const filteredProjects = activeFilter === t.gallery.all 
     ? projects 
     : projects.filter(project => project.category === activeFilter)
 
@@ -82,10 +86,10 @@ const Gallery = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="section-title">
-            Notre <span className="text-primary">Galerie</span>
+            {t.gallery.title} <span className="text-primary">{t.gallery.titleHighlight}</span>
           </h2>
           <p className="section-subtitle">
-            Découvrez quelques-uns de nos projets réalisés avec passion et professionnalisme
+            {t.gallery.subtitle}
           </p>
         </div>
 
@@ -165,7 +169,7 @@ const Gallery = () => {
                 <h3 className="text-3xl font-bold mt-4 mb-2 text-gray-800">{selectedImage.title}</h3>
                 <p className="text-gray-600 text-lg">{selectedImage.description}</p>
                 <a href="https://wa.me/212722284955?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%20BrexHome%D8%8C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D9%85%D8%B4%D8%B1%D9%88%D8%B9%20%D9%85%D9%85%D8%A7%D8%AB%D9%84" target="_blank" rel="noopener noreferrer" className="btn-primary mt-6 inline-block">
-                  Projet similaire ? Contactez-nous
+                  {t.gallery.similarProject}
                 </a>
               </div>
             </div>
@@ -175,10 +179,10 @@ const Gallery = () => {
         {/* CTA */}
         <div className="mt-16 text-center">
           <p className="text-gray-600 mb-6">
-            Vous avez un projet en tête ? Nous serions ravis de le réaliser pour vous !
+            {t.gallery.ctaText}
           </p>
           <a href="https://wa.me/212722284955?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%20BrexHome%D8%8C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%A8%D8%AF%D8%A1%20%D9%85%D8%B4%D8%B1%D9%88%D8%B9%D9%8A" target="_blank" rel="noopener noreferrer" className="btn-primary inline-block">
-            Démarrer votre projet
+            {t.gallery.startProject}
           </a>
         </div>
       </div>

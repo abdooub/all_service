@@ -1,7 +1,11 @@
 import React from 'react'
 import { ArrowRight, CheckCircle, Phone } from 'lucide-react'
+import { useLanguage } from '../contexts/LanguageContext'
+import { translations } from '../translations/translations'
 
 const Hero = () => {
+  const { language } = useLanguage()
+  const t = translations[language]
   return (
     <section id="home" className="relative pt-20 bg-gradient-to-br from-blue-50 via-white to-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32">
@@ -10,28 +14,22 @@ const Hero = () => {
           <div className="text-center md:text-left">
             <div className="inline-block mb-4">
               <span className="bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-semibold">
-                🏠 خدمات منزلية متكاملة في مراكش
+                {t.hero.badge}
               </span>
             </div>
             
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-              بيتك في{' '}
-              <span className="text-primary">أيادي أمينة</span>
+              {t.hero.title}{' '}
+              <span className="text-primary">{t.hero.titleHighlight}</span>
             </h1>
             
             <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-              خدمات منزلية متكاملة: صباغة وديكور عصري، كهرباء وإضاءة، سباكة وتجهيزات صحية، 
-              تركيب كاميرات مراقبة، صيانة وإصلاحات متنوعة.
+              {t.hero.description}
             </p>
 
             {/* Features */}
             <div className="space-y-3 mb-8">
-              {[
-                'جودة عالية في العمل',
-                'سرعة في الإنجاز',
-                'أثمنة مناسبة وتنافسية',
-                'راحة البال والاطمئنان'
-              ].map((feature, index) => (
+              {t.hero.features.map((feature, index) => (
                 <div key={index} className="flex items-center space-x-3">
                   <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0" />
                   <span className="text-gray-700">{feature}</span>
@@ -42,12 +40,12 @@ const Hero = () => {
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
               <a href="https://wa.me/212722284955?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%20BrexHome%D8%8C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%A7%D9%84%D8%AD%D8%B5%D9%88%D9%84%20%D8%B9%D9%84%D9%89%20%D8%B9%D8%B1%D8%B6%20%D8%B3%D8%B9%D8%B1" target="_blank" rel="noopener noreferrer" className="btn-primary inline-flex items-center justify-center space-x-2">
-                <span>Demander un devis</span>
+                <span>{t.hero.cta}</span>
                 <ArrowRight className="h-5 w-5" />
               </a>
               <a href="tel:+212722284955" className="btn-secondary inline-flex items-center justify-center space-x-2">
                 <Phone className="h-5 w-5" />
-                <span>Appelez maintenant</span>
+                <span>{t.hero.callNow}</span>
               </a>
             </div>
           </div>
@@ -60,7 +58,7 @@ const Hero = () => {
                   <div className="text-6xl mb-4">🏡</div>
                   <h3 className="text-3xl font-bold mb-2">BrexHome</h3>
                   <p className="text-xl opacity-90">بريكس هوم</p>
-                  <p className="mt-4 text-lg">بيتك في أيادي أمينة</p>
+                  <p className="mt-4 text-lg">{t.hero.tagline}</p>
                 </div>
               </div>
             </div>
@@ -68,7 +66,7 @@ const Hero = () => {
             {/* Floating Stats */}
             <div className="absolute -bottom-6 -left-6 bg-white rounded-xl shadow-xl p-6 border-t-4 border-primary">
               <div className="text-3xl font-bold text-primary">500+</div>
-              <div className="text-gray-600 text-sm">Projets réalisés</div>
+              <div className="text-gray-600 text-sm">{t.hero.projects}</div>
             </div>
             
             <div className="absolute -top-6 -right-6 bg-white rounded-xl shadow-xl p-6 border-t-4 border-green-500">
